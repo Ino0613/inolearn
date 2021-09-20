@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ino Learning Two</title>
+
+    <style>
+
+        #box1{
+            color: orange;
+        }
+
+        div{
+            color: aquamarine;
+        }
+
+        .red{
+            color: red !important;
+        }
+
+        div#box1{
+            background-color: green;
+        }
+
+        /* 
+            样式的冲突
+                -当我们通过不同的选择器，选中相同的元素，并且为相同的样式设置不同的值是，此时就发生了样式的冲突
+            发生冲突时，应用哪个样式由选择器的权重（优先权）决定
+
+            选择器的权重
+                内联样式        1000    1,0,0,0 
+                id选择器        100     0,1,0,0
+                类和伪类选择器   10      0,0,1,0
+                元素选择器       1       0,0,0,1
+                通配选择器       0       0,0,0,0
+                继承的样式       没有优先级
+
+
+            比较优先级时，需要将所有的选择器的优先级进行相加计算，最后优先级越高，则越优先显示（分组选择器是单独计算的）
+                选择器的累加不会超过其最大的数量级，类选择器再高也不会超过id选择器
+        
+            如果优先级计算后相等，此时优先使用靠下的样式
+            !important
+
+         */
+
+            /* 
+                长度单位:
+                    像素 
+
+                    百分比
+
+                    em
+                        - em 相对于元素字体大小来计算的
+                        - 1em = 1 font size
+
+                    rem
+                        - rem 相对于根元素的html的字体大小来计算 
+
+                颜色单位:
+                    在CSS中可以直接使用颜色名来设置各种颜色
+                        比如:red、orange等
+                        但是在css中直接使用颜色名是非常不方便
+                    
+                    RGB值:
+                        - RGB通过三种颜色的不同浓度来调配出不同的颜色
+                        - 每一种颜色的范围在 0 - 255（0% ~ 100%）之间
+            
+             */
+        
+         .box2{
+             width: 200px;
+             height: 200px;
+             background-color: orange;
+             color: rgb(255, 0, 0);
+         }
+         .box3{
+             width: 50%;
+             height: 50%;
+             background-color: cyan;
+         }
+         .box4{
+             font-size: 5px;
+             /* width:10em;
+             height:10em; */
+            width: 400px;
+            height: 400px;
+             background-color: blueviolet;
+         }
+         
+    </style>
+
+</head>
+<body>
+    
+    <!-- <div id="box1" class="red" style="background-color: cyan;">我是一个div</div> -->
+    <div id="box1" class="red" >我是一个div</div>
+
+    <div class="box2">
+
+        <div class="box3">
+
+    </div>
+    <br><br><br><br><br>
+    <div class="box4"></div>
+
+
+</body>
+</html>
