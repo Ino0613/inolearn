@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .outer{
+            background-color: #bfa;
+
+        }
+        .inner{
+            width: 100px;
+            background-color: yellow;
+            height: 200px;
+            margin-bottom: 200px;
+        } */
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            /* 
+                子元素实在父元素的内容区中排列的
+                    如果子元素的大小超过了父元素，则子元素会从父元素中溢出
+                    使用overflow属性来设置父元素如何处理溢出的子元素
+
+                    可选值：
+                        visible: 默认值 子元素会从父元素中溢出 在父元素外部的位置显示
+                        hidden 溢出内容将会被裁剪不会显示
+                        scrool 生成两个滚动条，通过滚动条来查看完整的内容
+
+                
+            */
+            overflow:scroll;
+            /* overflow-x:auto;
+            overflow-y: auto; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="outer">
+        <div class="inner"></div>
+    </div> -->
+    <div class="box1">
+        asdasdasdasdsadasdasdsasdasdasdasd
+    </div>
+</body>
+</html>
